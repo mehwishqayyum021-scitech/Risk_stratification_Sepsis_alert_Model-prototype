@@ -30,7 +30,26 @@ except Exception as e:
 # ============================================================
 st.title("🛡️ Sepsis Early Alert System")
 st.caption("Educational Clinical Decision Support System Prototype")
+st.subheader("Patient Demographics")
+demo_col1, demo_col2 = st.columns(2)
 
+with demo_col1:
+    # This defines the 'age' variable the error was looking for
+    age = st.number_input(
+        "Patient Age",
+        min_value=0,
+        max_value=120,
+        value=int(clinical_normals.get("Age", 45))
+    )
+
+with demo_col2:
+    # This defines the 'gender_value' variable
+    gender = st.selectbox("Gender", ["Male", "Female"])
+    # Mapping to numeric for the model (usually 1 for Male, 0 for Female - check your model's training)
+    gender_value = 1 if gender == "Male" else 0
+
+# ============================================================
+# Then your existing Vital Signs code continues below...
 st.subheader("Vital Signs & Selected Clinical Laboratory Values")
 
 col1, col2, col3 = st.columns(3)
