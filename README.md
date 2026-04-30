@@ -20,10 +20,7 @@ data/`: (Optional) Sample anonymized clinical data for testing.
 # 4. Setup & Installation
 To run this project locally:
 
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/mehwishqayyum021-Scitech/sepsis-model-repo.git](https://github.com/YOUR_USERNAME/sepsis-model-repo.git)
-   cd sepsis-model-repo
+
 
 ⚠️ Important Medical Disclaimer & Regulatory Status
 
